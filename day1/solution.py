@@ -28,9 +28,8 @@ def perform_comparisons(lines, window_size=1):
             \nTotal Comparisons: {inc_count+dec_count+eq_count}')
     return inc_count
 
-with open('input') as fp:
-    lines = [int(line.strip()) for line in fp.readlines() if len(line) > 0]
-    # change window_size here from 3 to 1 for Part 1 instead of Part 2
-    inc = perform_comparisons(lines, window_size=3)
-
-
+if __name__ == "__main__":
+    with open('input') as fp:
+        lines = [int(line.strip()) for line in fp.readlines() if len(line) > 0]
+        # change window_size here from 3 to 1 for Part 1 instead of Part 2
+        inc = perform_comparisons(lines, window_size=3)
